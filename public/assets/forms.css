@@ -1,0 +1,13 @@
+.account-layout { min-height:100vh; background:#f3f0f7; padding:clamp(20px,4vw,55px); }
+.account-layout > .brand { display:inline-flex; gap:10px; align-items:center; }
+.account-card { margin:24px auto; max-width:470px; padding:clamp(24px,4vw,44px); border:1px solid #dfdae6; border-radius:20px; background:white; box-shadow:0 12px 40px #30263c0b; }
+.account-card h1 { font-size:2rem; margin:10px 0; }
+.account-card > p { color:#655d71; line-height:1.6; }
+.account-card .eyebrow { color:#794fa1; }
+.account-card form { margin-top:24px; display:grid; gap:12px; }
+.account-card label { display:grid; gap:5px; }
+.account-card input { width:100%; }
+#form-status:empty { display:none; }
+#form-status { color:#803342; font-size:.92rem; line-height:1.6; }
+#form-status.success { color:#28714e; }
+.auth-switch a { color:#6440a4; font-weight:650; }

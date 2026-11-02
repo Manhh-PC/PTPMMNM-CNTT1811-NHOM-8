@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict');
+const g=require('../public/assets/geometry.js');
+const sample={x:.75,y:.3,w:0,h:0};
+assert.deepEqual(g.display(sample,500,250),{x:375,y:75,w:0,h:0});
+assert.deepEqual(g.point(475,275,{left:100,top:200,width:500,height:250}),{x:.75,y:.3});
+assert.deepEqual(g.display(sample,2000,1000),{x:1500,y:300,w:0,h:0});
+assert.deepEqual(g.rectangle({x:.8,y:.7},{x:.2,y:.1}),{x:.2,y:.1,w:.6000000000000001,h:.6});
+assert.deepEqual(g.point(-10,999,{left:100,top:100,width:500,height:250}),{x:0,y:1});
+assert.deepEqual(g.display({x:.2,y:.25,w:.3,h:.4},1000,500),{x:200,y:125,w:300,h:200});
+console.log('PASS 6 coordinate assertions: resize, margins, zoom, reversed drag, clamp, rectangle');
